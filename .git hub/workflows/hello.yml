@@ -1,1 +1,20 @@
 # this is going to be my work flow
+name: Hello World workflows
+
+# events that trigger this workflow
+on:
+  push:
+    branches: [master]
+  pull_resquest:
+    branches: [master, staging]
+
+# jobs to run
+jobs:
+  greet:
+  # the type of run to use e.g windows, ubuntu, mac
+    runs-on: ubuntu-lastest
+    # steps to excute in this job
+  steps: 
+  # run a single line command
+    - name: Hello
+      run: echo "hello world"
